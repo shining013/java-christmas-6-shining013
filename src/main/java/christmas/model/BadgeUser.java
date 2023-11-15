@@ -15,6 +15,6 @@ public class BadgeUser {
         if (total <= 5000) {
             badge = Badge.NON;
         }
-        return badge.getBadgeName(badge);
+        return badge.getBadgeName();
     }
 }
