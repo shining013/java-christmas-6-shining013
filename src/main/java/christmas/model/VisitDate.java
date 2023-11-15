@@ -13,6 +13,6 @@ public class VisitDate {
 
     @Override
     public String toString() {
-        return String.format("방문 예정일 (날짜 = %d)",visitDate);
+        return String.format("방문 예정일 (날짜 = %d)", visitDate);
     }
 }

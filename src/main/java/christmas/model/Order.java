@@ -10,7 +10,7 @@ import christmas.Constants;
 public class Order {
     public static Map<String, Integer> ITEMS;
     private final MenuBoard menuBoard = new MenuBoard();
-    private double beforeDiscountAmount=0;
+    private double beforeDiscountAmount = 0;
 
     public Order(String enterOrder) {
         ITEMS = new HashMap<>();
@@ -30,7 +30,7 @@ public class Order {
         if (ITEMS.containsKey(menu)) {
             throw new IllegalArgumentException(Constants.INVALID_ORDER_ERROR);
         }
-        ITEMS.put(menu,quantity);
+        ITEMS.put(menu, quantity);
     }
 
     public void setOrder(String enterOrder) {
@@ -46,7 +46,7 @@ public class Order {
     public void setOrderBoard(String[] order) {
         String menu = order[0];
         int quantity = Integer.parseInt(order[1]);
-        addItem(menu,quantity);
+        addItem(menu, quantity);
     }
 
     public void setBeforeDiscountAmount() {
@@ -62,7 +62,7 @@ public class Order {
     }
 
     public double getTotalBenefitAmount(double christmas, double weekDay, double weekEnd, double special, double gift) {
-        return christmas+weekDay+weekEnd+special+gift;
+        return christmas + weekDay + weekEnd + special + gift;
     }
 
     public int getQuantity(String menu) {

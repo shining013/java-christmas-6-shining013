@@ -101,6 +101,6 @@ public class OrderValidator {
 
     @Override
     public String toString() {
-        return String.format("주문 메뉴 (주문 메뉴 : %s",ENTER_ORDER);
+        return String.format("주문 메뉴 (주문 메뉴 : %s", ENTER_ORDER);
     }
 }

@@ -7,7 +7,7 @@ import christmas.model.*;
 import christmas.view.OutputView;
 
 public class EventController {
-    private int visitDate=0;
+    private int visitDate = 0;
     private Map<String, Integer> getOrder = new HashMap<>();
     private Order order;
 
@@ -23,13 +23,14 @@ public class EventController {
         this.order = new Order(orderInput);
         getOrder = order.getMenu();
     }
+
     public void show() {
         OutputView.printPreview(visitDate);
         OutputView.printOrderMenu(getOrder);
         OutputView.printBeforeDiscountAmount(order.getBeforeDiscountAmount());
         OutputView.printGiftMenu(order.getBeforeDiscountAmount());
-        Discount discount = new Discount(order.getBeforeDiscountAmount(),visitDate,getOrder);
-        OutputView.printBenefitHistory(discount.getChristmasDayDiscountAmount(),discount.getWeekDayDiscountAmount(),discount.getWeekEndDiscountAmount(),discount.getSpecialDayAmount(),discount.getGiftAmount());
+        Discount discount = new Discount(order.getBeforeDiscountAmount(), visitDate, getOrder);
+        OutputView.printBenefitHistory(discount.getChristmasDayDiscountAmount(), discount.getWeekDayDiscountAmount(), discount.getWeekEndDiscountAmount(), discount.getSpecialDayAmount(), discount.getGiftAmount());
         double totalBenefitAmount = order.getTotalBenefitAmount(discount.getChristmasDayDiscountAmount(), discount.getWeekDayDiscountAmount(), discount.getWeekEndDiscountAmount(), discount.getSpecialDayAmount(), discount.getGiftAmount());
         OutputView.printTotalBenefit(order.getTotalBenefitAmount(discount.getChristmasDayDiscountAmount(), discount.getWeekDayDiscountAmount(), discount.getWeekEndDiscountAmount(), discount.getSpecialDayAmount(), discount.getGiftAmount()));
         OutputView.printAfterDiscount(order.getBeforeDiscountAmount() - (totalBenefitAmount - discount.getGiftAmount()));

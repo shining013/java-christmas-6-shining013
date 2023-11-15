@@ -3,6 +3,7 @@ package christmas.controller;
 import christmas.model.*;
 import christmas.view.InputView;
 import christmas.Constants;
+
 public class InputController {
     public static int setDate() {
         try {

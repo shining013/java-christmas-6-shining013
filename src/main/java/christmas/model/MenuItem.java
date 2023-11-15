@@ -25,6 +25,6 @@ public class MenuItem {
 
     @Override
     public String toString() {
-        return String.format("메뉴 항목 (메뉴명 : %s, 카테고리 : %s, 가격 : %f)",name,category,price);
+        return String.format("메뉴 항목 (메뉴명 : %s, 카테고리 : %s, 가격 : %f)", name, category, price);
     }
 }

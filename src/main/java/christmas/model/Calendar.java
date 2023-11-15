@@ -5,6 +5,7 @@ import java.util.Collections;
 
 public class Calendar {
     private final ArrayList<Date> calendar;
+
     public Calendar() {
         this.calendar = new ArrayList<>();
         Date[] dates = {
@@ -42,6 +43,7 @@ public class Calendar {
         };
         Collections.addAll(calendar, dates);
     }
+
     public double christmasDiscountApply(int targetDay) {
         for (Date date : calendar) {
             if (date.getDate() == targetDay && date.isChristmasD_dayDiscount()) {

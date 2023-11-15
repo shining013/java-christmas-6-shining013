@@ -14,18 +14,18 @@ public class MenuBoard {
 
     public void initializeMenu() {
         MenuItem[] menu = {
-            new MenuItem("양송이수프", 6000, "appetizer"),
-            new MenuItem("타파스", 5500, "appetizer"),
-            new MenuItem("시저샐러드", 8000, "appetizer"),
-            new MenuItem("티본스테이크", 55000, "mainDish"),
-            new MenuItem("바비큐립", 54000, "mainDish"),
-            new MenuItem("해산물파스타", 35000, "mainDish"),
-            new MenuItem("크리스마스파스타", 25000, "mainDish"),
-            new MenuItem("초코케이크", 15000, "dessert"),
-            new MenuItem("아이스크림", 5000, "dessert"),
-            new MenuItem("제로콜라", 3000, "beverage"),
-            new MenuItem("레드와인", 60000, "beverage"),
-            new MenuItem("샴페인", 25000, "beverage")
+                new MenuItem("양송이수프", 6000, "appetizer"),
+                new MenuItem("타파스", 5500, "appetizer"),
+                new MenuItem("시저샐러드", 8000, "appetizer"),
+                new MenuItem("티본스테이크", 55000, "mainDish"),
+                new MenuItem("바비큐립", 54000, "mainDish"),
+                new MenuItem("해산물파스타", 35000, "mainDish"),
+                new MenuItem("크리스마스파스타", 25000, "mainDish"),
+                new MenuItem("초코케이크", 15000, "dessert"),
+                new MenuItem("아이스크림", 5000, "dessert"),
+                new MenuItem("제로콜라", 3000, "beverage"),
+                new MenuItem("레드와인", 60000, "beverage"),
+                new MenuItem("샴페인", 25000, "beverage")
         };
         Collections.addAll(menuList, menu);
     }
@@ -41,7 +41,7 @@ public class MenuBoard {
 
     public double getMenuPrice(String menuName) {
         for (MenuItem menuItem : menuList) {
-            if (Objects.equals(menuItem.getName(),menuName)) {
+            if (Objects.equals(menuItem.getName(), menuName)) {
                 return menuItem.getPrice();
             }
         }
