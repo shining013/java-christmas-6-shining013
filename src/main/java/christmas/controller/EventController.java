@@ -7,7 +7,7 @@ import christmas.model.*;
 import christmas.view.OutputView;
 
 public class EventController {
-    private int visitDate;
+    private int visitDate=0;
     private Map<String, Integer> getOrder = new HashMap<>();
     private Order order;
 
@@ -32,7 +32,6 @@ public class EventController {
         OutputView.printBenefitHistory(discount.getChristmasDayDiscountAmount(),discount.getWeekDayDiscountAmount(),discount.getWeekEndDiscountAmount(),discount.getSpecialDayAmount(),discount.getGiftAmount());
         double totalBenefitAmount = order.getTotalBenefitAmount(discount.getChristmasDayDiscountAmount(), discount.getWeekDayDiscountAmount(), discount.getWeekEndDiscountAmount(), discount.getSpecialDayAmount(), discount.getGiftAmount());
         OutputView.printTotalBenefit(order.getTotalBenefitAmount(discount.getChristmasDayDiscountAmount(), discount.getWeekDayDiscountAmount(), discount.getWeekEndDiscountAmount(), discount.getSpecialDayAmount(), discount.getGiftAmount()));
-        double afterDiscountAmount = order.getBeforeDiscountAmount() - (totalBenefitAmount - discount.getGiftAmount());
         OutputView.printAfterDiscount(order.getBeforeDiscountAmount() - (totalBenefitAmount - discount.getGiftAmount()));
         BadgeUser badgeUser = new BadgeUser();
         OutputView.printEventBadge(badgeUser.calculateBadge(totalBenefitAmount));
