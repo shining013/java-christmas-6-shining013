@@ -24,4 +24,9 @@ public class VisitDateValidator {
             throw new IllegalArgumentException(Constants.INVALID_DATE_ERROR);
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("방문 예정일 (날짜 = %d)",visitDate);
+    }
 }
