@@ -7,10 +7,6 @@ public class VisitDateValidator {
 
     public VisitDateValidator(String visitDate) {
         this.visitDate = visitDate;
-        validate();
-    }
-
-    public void validate() {
         isDateValid();
     }
 

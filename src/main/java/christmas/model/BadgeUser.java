@@ -1,9 +1,9 @@
 package christmas.model;
 
 public class BadgeUser {
-    private Badge badge;
 
     public String calculateBadge(double total) {
+        Badge badge;
         badge = Badge.NON;
         if (total >= 5000) {
             badge = Badge.STAR;
@@ -17,6 +17,6 @@ public class BadgeUser {
         if (total <= 5000) {
             badge = Badge.NON;
         }
-        return badge.getBadgeName();
+        return badge.badgeName;
     }
 }
