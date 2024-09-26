@@ -3,6 +3,10 @@ package christmas.model;
 public class BadgeUser {
     private Badge badge;
 
+    public String getBadgeName() {
+        return badge.badgeName;
+    }
+
     public String calculateBadge(double total) {
         badge = Badge.NON;
         if (total >= 5000) {
@@ -17,6 +21,6 @@ public class BadgeUser {
         if (total <= 5000) {
             badge = Badge.NON;
         }
-        return badge.getBadgeName();
+        return getBadgeName();
     }
 }

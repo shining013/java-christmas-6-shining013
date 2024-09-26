@@ -5,13 +5,9 @@ public enum Badge {
     STAR("별"),
     TREE("트리"),
     SANTA("산타");
-    private final String badgeName;
+    final String badgeName;
 
     Badge(String badgeName) {
         this.badgeName = badgeName;
-    }
-
-    public String getBadgeName() {
-        return this.badgeName;
     }
 }
