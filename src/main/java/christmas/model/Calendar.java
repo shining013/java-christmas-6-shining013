@@ -18,7 +18,7 @@ public class Calendar {
 
     public double christmasDiscountApply(int targetDay) {
         for (Date date : calendar) {
-            if (date.getDate() == targetDay && date.isIschristmasDDaydiscount()) {
+            if (date.date() == targetDay && date.ischristmasDDaydiscount()) {
                 return 1000 + ((targetDay - 1) * 100);
             }
         }
@@ -27,7 +27,7 @@ public class Calendar {
 
     public double specialDiscountApply(int targetDay) {
         for (Date date : calendar) {
-            if (date.getDate() == targetDay && date.isSpecialDiscountDate())
+            if (date.date() == targetDay && date.isSpecialDiscountDate())
                 return 1000;
         }
         return 0;
@@ -42,7 +42,7 @@ public class Calendar {
 
     public boolean weekDayApply(int targetDay) {
         for (Date date : calendar) {
-            if (date.getDate() == targetDay && date.isWeekDay()) {
+            if (date.date() == targetDay && date.isWeekDay()) {
                 return true;
             }
         }
