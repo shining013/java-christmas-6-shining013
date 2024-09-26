@@ -19,7 +19,7 @@ public class Calendar {
 
     public double christmasDiscountApply(int targetDay) {
         for (Date date : calendar) {
-            if (date.getDate() == targetDay && date.isChristmasD_dayDiscount()) {
+            if (date.getDate() == targetDay && date.isIschristmasDDaydiscount()) {
                 return 1000 + ((targetDay - 1) * 100);
             }
         }
