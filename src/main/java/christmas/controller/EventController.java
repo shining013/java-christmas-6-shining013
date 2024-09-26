@@ -12,12 +12,15 @@ public class EventController {
     private Order order;
 
     public EventController() {
+        start();
         set();
         show();
     }
+    public void start() {
+        OutputView.Greeting();
+    }
 
     public void set() {
-        OutputView.Greeting();
         visitDate = InputController.setDate();
         String orderInput = InputController.setOrder();
         this.order = new Order(orderInput);
