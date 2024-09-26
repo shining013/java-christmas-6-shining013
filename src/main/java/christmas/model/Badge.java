@@ -6,7 +6,6 @@ public enum Badge {
     TREE("트리"),
     SANTA("산타");
     final String badgeName;
-
     Badge(String badgeName) {
         this.badgeName = badgeName;
     }
