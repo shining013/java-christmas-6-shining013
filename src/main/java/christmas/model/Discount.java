@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import christmas.Constants;
+import lombok.Getter;
 
+@Getter
 public class Discount {
     private final double beforeDiscountAmount;
     private final int visitDate;
@@ -14,8 +16,8 @@ public class Discount {
     private double specialDayAmount = 0;
     private double giftAmount = 0;
     private Map<String, Integer> getOrder = new HashMap<>();
-    Calendar calendar = new Calendar();
-    MenuBoard menuBoard = new MenuBoard();
+    private MenuBoard menuBoard; // 생성자 주입
+    private Calendar calendar;
 
     public Discount(double beforeDiscountAmount, int visitDate, Map<String, Integer> order) {
         this.beforeDiscountAmount = beforeDiscountAmount;
@@ -54,25 +56,5 @@ public class Discount {
         for (String key : getOrder.keySet()) {
             weekEndDiscountAmount += menuBoard.calculateMainDish(key, getOrder.get(key));
         }
-    }
-
-    public double getChristmasDayDiscountAmount() {
-        return christmasDayDiscountAmount;
-    }
-
-    public double getWeekDayDiscountAmount() {
-        return weekDayDiscountAmount;
-    }
-
-    public double getWeekEndDiscountAmount() {
-        return weekEndDiscountAmount;
-    }
-
-    public double getSpecialDayAmount() {
-        return specialDayAmount;
-    }
-
-    public double getGiftAmount() {
-        return giftAmount;
     }
 }
